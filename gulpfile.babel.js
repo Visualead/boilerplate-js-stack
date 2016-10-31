@@ -13,7 +13,7 @@ gulp.task('babel', () => {
 });
 
 gulp.task('watch', function() {
-
     gulp.watch([`${paths.dirSrc}/**/*.js`], ['babel']);
-
 });
+
+gulp.task('default', ['watch', 'babel']);
