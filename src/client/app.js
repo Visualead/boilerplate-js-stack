@@ -1,5 +1,7 @@
-import Calculator from "./math.js"
-import { foo, cube } from "./math.js"
+import Calculator from "../shared/math.js"
+import { foo, cube } from "../shared/math.js"
+
+document.querySelector('.app').innerHTML = `The Cube of 3 is ${cube(3)} <br> Psst... Look in console to see await and async in action`;
 
 async function logA() {
     for(let i = 0; i<100; i++) {
