@@ -1,53 +1,68 @@
 class Calculator {
 
-    add(...args) {
-        let sum = 0;
-        for(let i in args) {
-            sum += args[i];
-        }
+  static add(...args) {
+    let sum = 0;
 
-        return sum;
-    }
+    Object.keys(args).forEach((key) => {
+      if (args[key]) {
+        sum += args[key];
+      }
+    });
 
-    multiply(...args) {
-        let sum = 0;
-        for(let i in args) {
-            sum *= args[i];
-        }
+    return sum;
+  }
 
-        return sum;
-    }
+  static multiply(...args) {
+    let sum = 0;
 
-    subtract(...args) {
-        let sum = 0;
-        for(let i in args) {
-            sum -= args[i];
-        }
+    Object.keys(args).forEach((key) => {
+      if (args[key]) {
+        sum *= args[key];
+      }
+    });
 
-        return sum;
-    }
+    return sum;
+  }
 
-    divide(...args) {
-        let sum = 0;
-        for(let i in args) {
-            sum /= args[i];
-        }
+  static subtract(...args) {
+    let sum = 0;
 
-        return sum;
-    }
+    Object.keys(args).forEach((key) => {
+      if (args[key]) {
+        sum -= args[key];
+      }
+    });
 
-    pow(...args) {
-        let sum = 1;
-        for(let i in args) {
-            sum = sum ** args[i];
-        }
+    return sum;
+  }
 
-        return sum;
-    }
+  static divide(...args) {
+    let sum = 0;
+
+    Object.keys(args).forEach((key) => {
+      if (args[key]) {
+        sum /= args[key];
+      }
+    });
+
+    return sum;
+  }
+
+  static pow(...args) {
+    let sum = 1;
+
+    Object.keys(args).forEach((key) => {
+      if (args[key]) {
+        sum = sum ** args[key];
+      }
+    });
+
+    return sum;
+  }
 }
 
 function cube(x) {
-    return x * x * x;
+  return x * x * x;
 }
 const foo = Math.PI + Math.SQRT2;
 
