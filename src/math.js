@@ -1,4 +1,4 @@
-// This is Kinda special because I do want this to be instanciated  [SagiN]
+// This is Kinda special because I want to use instances of calculator + nice example of eslint exceptions  [SagiN]
 /* eslint class-methods-use-this: ["error", { "exceptMethods": ["multiply", "add", "divide", "pow"] }] */
 
 class Calculator {
