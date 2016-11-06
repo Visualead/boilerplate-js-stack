@@ -5,6 +5,7 @@
     "node": true
   },
   "rules": {
+    "no-console": ["off"],
     "comma-dangle": 0,
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "max-len": ["warn", 120]
