@@ -1,9 +1,9 @@
 // This is Kinda special because I want to use instances of calculator + nice example of eslint exceptions  [SagiN]
-/* eslint class-methods-use-this: ["error", { "exceptMethods": ["multiply", "add", "divide", "pow"] }] */
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["multiply", "add", "divide", "pow","subtract"] }] */
 
 class Calculator {
 
-  static add(...args) {
+  add(...args) {
     let sum = 0;
 
     Object.keys(args).forEach((key) => {
@@ -27,7 +27,7 @@ class Calculator {
     return sum;
   }
 
-  static subtract(...args) {
+  subtract(...args) {
     let sum = 0;
 
     Object.keys(args).forEach((key) => {
@@ -39,7 +39,7 @@ class Calculator {
     return sum;
   }
 
-  static divide(...args) {
+  divide(...args) {
     let sum = 0;
 
     Object.keys(args).forEach((key) => {
@@ -51,7 +51,7 @@ class Calculator {
     return sum;
   }
 
-  static pow(...args) {
+  pow(...args) {
     let sum = 1;
 
     Object.keys(args).forEach((key) => {
