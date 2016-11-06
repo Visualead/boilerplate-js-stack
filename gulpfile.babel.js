@@ -11,13 +11,13 @@ const config = {
   }
 };
 
-gulp.task('babel-src', ['lint-src'], () =>
+gulp.task('babelSrc', ['eslintSrc'], () =>
   gulp.src(config.paths.js.src)
     .pipe(babel())
     .pipe(gulp.dest(config.paths.js.lib))
 );
 
-gulp.task('lint-src', () =>
+gulp.task('eslintSrc', () =>
   gulp.src(config.paths.js.src)
     .pipe(eslint())
     .pipe(eslint.format())
@@ -27,7 +27,7 @@ gulp.task('lint-src', () =>
 );
 
 gulp.task('watch', () => {
-  gulp.watch(config.paths.js.src, ['babel-src', 'test']);
+  gulp.watch(config.paths.js.src, ['babelSrc']);
 });
 
-gulp.task('default', ['watch', 'babel-src']);
+gulp.task('default', ['watch', 'babelSrc']);
