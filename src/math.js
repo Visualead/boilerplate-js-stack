@@ -1,3 +1,6 @@
+// This is Kinda special because I do want this to be instanciated  [SagiN]
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["multiply", "add", "divide", "pow"] }] */
+
 class Calculator {
 
   static add(...args) {
@@ -12,7 +15,7 @@ class Calculator {
     return sum;
   }
 
-  static multiply(...args) {
+  multiply(...args) {
     let sum = 0;
 
     Object.keys(args).forEach((key) => {

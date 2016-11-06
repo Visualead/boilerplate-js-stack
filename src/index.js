@@ -15,7 +15,8 @@ async function logB() {
 logA();
 logB();
 
-console.log(Calculator.add(1, 2, 3, 4, 5, 6));
+const calc = new Calculator();
+console.log(calc.add(1, 2, 3, 4, 5, 6));
 
 console.log(cube(100));
 
