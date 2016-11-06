@@ -2,23 +2,20 @@ import gulp from 'gulp';
 import babel from 'gulp-babel';
 import eslint from 'gulp-eslint';
 
-const config = {
-  paths: {
-    js: {
-      src: 'src/**/*.js',
-      lib: 'lib/'
-    }
-  }
+const paths = {
+  srcJs: 'src/**/*.js',
+  libDir: 'lib/',
+  srcDir: 'src/'
 };
 
 gulp.task('babelSrc', ['eslintSrc'], () =>
-  gulp.src(config.paths.js.src)
+  gulp.src(paths.srcJs)
     .pipe(babel())
-    .pipe(gulp.dest(config.paths.js.lib))
+    .pipe(gulp.dest(paths.libDir))
 );
 
 gulp.task('eslintSrc', () =>
-  gulp.src(config.paths.js.src)
+  gulp.src(paths.srcJs)
     .pipe(eslint())
     .pipe(eslint.format())
     // To have the process exit with an error code (1) on
@@ -27,7 +24,7 @@ gulp.task('eslintSrc', () =>
 );
 
 gulp.task('watch', () => {
-  gulp.watch(config.paths.js.src, ['babelSrc']);
+  gulp.watch(paths.srcJs, ['babelSrc']);
 });
 
 gulp.task('default', ['watch', 'babelSrc']);
