@@ -5,9 +5,11 @@
     "node": true
   },
   "rules": {
-    "no-console": ["off"],
-    "comma-dangle": 0,
-    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
-    "max-len": ["warn", 120]
+    "comma-dangle": [ "warn" ],
+    "max-len": [ "warn", 120, 2, { "ignoreUrls": true, "ignoreComments": true } ],
+    "no-console": [ "off" ],
+    "no-plusplus": [ "error", { "allowForLoopAfterthoughts": true } ],
+    "prefer-const": 1,
+    "spaced-comment": [ "warn" ]
   }
 }
