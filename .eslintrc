@@ -6,6 +6,7 @@
   },
   "rules": {
     "comma-dangle": 0,
-    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "max-len": ["warn", 120]
   }
 }
