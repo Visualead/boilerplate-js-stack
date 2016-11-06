@@ -1,16 +1,22 @@
 import gulp from 'gulp';
 import babel from 'gulp-babel';
 import eslint from 'gulp-eslint';
+import sourcemaps from "gulp-sourcemaps";
+import path from "path";
 
 const paths = {
   srcJs: 'src/**/*.js',
   libDir: 'lib/',
-  srcDir: 'src/'
+  srcDir: 'src/',
+
+  sourceRoot: path.join(__dirname, 'src'),
 };
 
 gulp.task('babelSrc', ['eslintSrc'], () =>
   gulp.src(paths.srcJs)
+    .pipe(sourcemaps.init())
     .pipe(babel())
+    .pipe(sourcemaps.write('.', { sourceRoot: paths.sourceRoot }))
     .pipe(gulp.dest(paths.libDir))
 );
 
