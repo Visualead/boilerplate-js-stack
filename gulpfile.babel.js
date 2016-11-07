@@ -1,8 +1,8 @@
 import gulp from 'gulp';
 import babel from 'gulp-babel';
 import eslint from 'gulp-eslint';
-import sourcemaps from "gulp-sourcemaps";
-import path from "path";
+import sourcemaps from 'gulp-sourcemaps';
+import path from 'path';
 
 const paths = {
   srcJs: 'src/**/*.js',
