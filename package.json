@@ -4,7 +4,9 @@
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint src"
+    "clean": "rimraf lib/",
+    "lint": "eslint src",
+    "test": "node node_modules/mocha/bin/mocha --reporter spec lib/test/**/*.js"
   },
   "dependencies": {},
   "devDependencies": {
@@ -24,6 +26,7 @@
     "gulp-mocha": "^3.0.1",
     "gulp-rimraf": "^0.2.1",
     "gulp-sourcemaps": "^2.2.0",
+    "rimraf": "^2.5.4",
     "run-sequence": "^1.2.2"
   }
 }
