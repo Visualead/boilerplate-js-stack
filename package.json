@@ -4,6 +4,7 @@
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
+    "build": "rimraf lib/ && babel src/ --out-dir lib/",
     "clean": "rimraf lib/",
     "lint": "eslint src",
     "test": "node node_modules/mocha/bin/mocha --reporter spec lib/test/**/*.js"
