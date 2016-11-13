@@ -16,7 +16,7 @@ class Calculator {
   }
 
   multiply(...args) {
-    let sum = 0;
+    let sum = 1;
 
     Object.keys(args).forEach((key) => {
       if (args[key]) {
