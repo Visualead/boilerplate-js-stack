@@ -40,7 +40,11 @@ gulp.task('eslintSrc', () =>
 );
 
 gulp.task('watch', () => {
-  gulp.watch(paths.srcJs, ['babelSrc', 'test']);
+  gulp.watch(paths.srcJs, ['babelSrc']);
+});
+
+gulp.task('watch-test', () => {
+  gulp.watch(paths.srcJs, ['test']);
 });
 
 gulp.task('test', ['babelSrc'], () =>
