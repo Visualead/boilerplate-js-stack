@@ -56,7 +56,7 @@ class Calculator {
 
     Object.keys(args).forEach((key) => {
       if (args[key]) {
-        sum = sum ** args[key];
+        sum *= args[key];
       }
     });
 
