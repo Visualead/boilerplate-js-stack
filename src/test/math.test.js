@@ -3,7 +3,7 @@
 
 import chai, { expect } from 'chai';
 import dirtyChai from 'dirty-chai';
-import './spec_helper';
+import './spec-helper';
 import Calculator from '../app/math';
 
 chai.use(dirtyChai);
