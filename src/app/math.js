@@ -52,11 +52,11 @@ class Calculator {
   }
 
   pow(...args) {
-    let sum = 1;
+    let sum = args.shift() || 1;
 
     Object.keys(args).forEach((key) => {
       if (args[key]) {
-        sum *= args[key];
+        sum **= args[key];
       }
     });
 
