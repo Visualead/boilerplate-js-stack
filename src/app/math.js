@@ -52,11 +52,11 @@ class Calculator {
   }
 
   pow(...args) {
-    let sum = 1;
+    let sum = args.shift() || 1;
 
     Object.keys(args).forEach((key) => {
       if (args[key]) {
-        sum = sum ** args[key];
+        sum **= args[key];
       }
     });
 
@@ -67,6 +67,7 @@ class Calculator {
 function cube(x) {
   return x * x * x;
 }
+
 const foo = Math.PI + Math.SQRT2;
 
 export default Calculator;
