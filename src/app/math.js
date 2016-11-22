@@ -3,68 +3,33 @@
 
 class Calculator {
 
-  add(...args) {
-    let sum = 0;
-
-    Object.keys(args).forEach((key) => {
-      if (args[key]) {
-        sum += args[key];
-      }
-    });
-
-    return sum;
+  add(...args: Array<number>) {
+    return args.reduce((total, val) => total + val, 0);
   }
 
-  multiply(...args) {
-    let sum = 1;
-
-    Object.keys(args).forEach((key) => {
-      if (args[key]) {
-        sum *= args[key];
-      }
-    });
-
-    return sum;
+  multiply(...args: Array<number>) {
+    return args.reduce((total, val) => total * val, 1);
   }
 
-  subtract(...args) {
-    let sum = 0;
-
-    Object.keys(args).forEach((key) => {
-      if (args[key]) {
-        sum -= args[key];
-      }
-    });
-
-    return sum;
+  subtract(...args: Array<number>) {
+    return args.reduce((total, val) => total - val, 0);
   }
 
-  divide(...args) {
-    let sum = 0;
-
-    Object.keys(args).forEach((key) => {
-      if (args[key]) {
-        sum /= args[key];
-      }
-    });
-
-    return sum;
+  divide(...args: Array<number>) {
+    return args.reduce((total, val) => total / val, 1);
   }
 
-  pow(...args) {
-    let sum = args.shift() || 1;
-
-    Object.keys(args).forEach((key) => {
-      if (args[key]) {
-        sum **= args[key];
+  pow(...args: Array<number>) {
+    return args.reduce((total, val) => {
+      if (total === 0) {
+        return val;
       }
-    });
-
-    return sum;
+      return total ** val;
+    }, 0);
   }
 }
 
-function cube(x) {
+function cube(x: number) {
   return x * x * x;
 }
 
