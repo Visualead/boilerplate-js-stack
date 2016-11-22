@@ -1,12 +1,14 @@
 {
   "presets": [
-    "es2015"
+    "es2015",
+    "flow"
   ],
   "plugins": [
     ["transform-runtime", {
       "polyfill": false,
       "regenerator": true
     }],
+    "typecheck",
     "transform-async-to-generator",
     "transform-exponentiation-operator"
   ]
