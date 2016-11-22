@@ -1,5 +1,15 @@
 [ignore]
+
 .*/node_modules
+.*/lib
+.*/flow-typed
+.*/gulpfile.babel.js
+
+[libs]
+
+.*/flow-typed/npm
+.*/flow-typed/
 
 [options]
+
 all=true
