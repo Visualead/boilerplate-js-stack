@@ -43,3 +43,6 @@ jspm_packages
 
 # ignore lib directory
 lib/
+
+# ignore flow-typed dir
+flow-typed
