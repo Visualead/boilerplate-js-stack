@@ -38,14 +38,13 @@ gulp.task('eslintSrc', () =>
     .pipe(eslint.failAfterError())
 );
 
-gulp.task('flowtypeSrc', () =>
-  gulp.src(paths.srcJs)
-    .pipe(flow({
-      declarations: './flow-typed/npm',
-      abort: true,
-      all: true,
-    })) // Add Flow here
-);
+gulp.task('flowtypeSrc', () => {
+  try {
+    execSync('./node_modules/.bin/flow', { stdio: 'inherit' });
+  } catch (e) {
+    gulp.stop();
+  }
+});
 
 gulp.task('lint', ['eslintSrc', 'flowtypeSrc']);
 
