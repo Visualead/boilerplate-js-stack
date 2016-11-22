@@ -1489,6 +1489,12 @@ eslint-import-resolver-node@^0.2.0:
     object-assign "^4.0.1"
     resolve "^1.1.6"
 
+eslint-plugin-flowtype:
+  version "2.25.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.25.0.tgz#c462521ab20ce3d8db819f10ad3c9f1bc7f3f819"
+  dependencies:
+    lodash "^4.15.0"
+
 eslint-plugin-import@^1.16.0:
   version "1.16.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-1.16.0.tgz#b2fa07ebcc53504d0f2a4477582ec8bff1871b9f"
@@ -2377,6 +2383,10 @@ inquirer@^0.12.0:
     strip-ansi "^3.0.0"
     through "^2.3.6"
 
+install:
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/install/-/install-0.8.2.tgz#bf3dc6fc7e9467a4e484b3e1d1f610f1c23adc0f"
+
 interpret@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.1.tgz#d579fb7f693b858004947af39fa0db49f795602c"
@@ -2923,7 +2933,7 @@ lodash@^4.0.0, lodash@^4.3.0:
   version "4.16.6"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.16.6.tgz#d22c9ac660288f3843e16ba7d2b5d06cca27d777"
 
-lodash@^4.11.2:
+lodash@^4.11.2, lodash@^4.15.0:
   version "4.17.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
 
