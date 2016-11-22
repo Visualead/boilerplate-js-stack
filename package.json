@@ -7,9 +7,12 @@
     "build": "rimraf lib/ && babel src/ --out-dir lib/",
     "clean": "rimraf lib/",
     "lint": "eslint src",
-    "test": "node node_modules/mocha/bin/mocha --reporter spec lib/test/**/*.js"
+    "test": "node node_modules/mocha/bin/mocha --reporter spec lib/test/**/*.js",
+    "flow:init": "flow-typed install --overwrite"
   },
-  "dependencies": {},
+  "dependencies": {
+    "flow-typed": "^2.0.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.0",
