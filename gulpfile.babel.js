@@ -31,14 +31,14 @@ gulp.task('babelSrc', ['lint'], () =>
     .pipe(gulp.dest(paths.libDir))
 );
 
-gulp.task('eslintSrc',() =>
+gulp.task('eslintSrc', () =>
   gulp.src(paths.srcJs)
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
 );
 
-gulp.task('flowtypeSrc',() =>
+gulp.task('flowtypeSrc', () =>
   gulp.src(paths.srcJs)
     .pipe(flow({
       declarations: './flow-typed/npm',
