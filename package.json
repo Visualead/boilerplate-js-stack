@@ -10,9 +10,7 @@
     "test": "node node_modules/mocha/bin/mocha --reporter spec lib/test/**/*.js",
     "flow:init": "flow-typed install --overwrite"
   },
-  "dependencies": {
-    "flow-typed": "^2.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.0",
@@ -31,6 +29,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.5.0",
     "flow-bin": "^0.35.0",
+    "flow-typed": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-eslint": "^3.0.1",
