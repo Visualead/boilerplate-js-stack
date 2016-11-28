@@ -9,6 +9,7 @@ import rimraf from 'gulp-rimraf';
 import runSequence from 'run-sequence';
 import sourcemaps from 'gulp-sourcemaps';
 import path from 'path';
+import { execSync } from 'child_process';
 
 const paths = {
   srcJs: 'src/**/*.js',
@@ -42,6 +43,9 @@ gulp.task('flowtypeSrc', () => {
   try {
     execSync('./node_modules/.bin/flow', { stdio: 'inherit' });
   } catch (e) {
+    if (!e.message.match(new RegExp('Command failed','i'))) {
+      console.log(e);
+    }
     gulp.stop();
   }
 });
